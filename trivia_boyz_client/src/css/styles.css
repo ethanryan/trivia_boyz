@@ -1,0 +1,12 @@
+* {
+  background-color: blue;
+}
+
+.col.s1 {
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 1px;
+  margin: 2px;
+  background-color: #FFFFFF;
+  text-align: center;
+}

@@ -150,7 +150,10 @@
       <div class="answer col s1 cell9">9</div>
       <div class="answer col s1 cell10">10</div>
     </div>
-    <h3><div id="score">Score Goes Here</div></h3>
+
+    <h3><div id="score">Score:</div></h3>
+
+    <h3><div id="timer">Timer: 15</div></h3>
 
     <div class="row">
       <div class="col s12">This div is 12-columns wide</div>
@@ -168,17 +171,7 @@
     <script type="text/javascript" src="src/js/index.js"></script>
   </div>
 
-  <script type="text/javascript">
-    $(function() {
-      $(".answer").click(function() {
-        if(this.innerHTML.length === 4) {
-          $(this).css("background", "green")
-        } else {
-          $(this).css("background", "red")
-        }
-      })
-    })
-  </script>
+
 
 </body>
 </html>

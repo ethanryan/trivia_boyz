@@ -2,6 +2,38 @@ $(document).ready(function() {
   console.log("What's up, Doc?")
   })
 
+  var count = 15;
+  var counter = setInterval(timer, 1000);
+
+  function timer() {
+    count = count-1;
+    if (count <= 0) {
+      clearInterval(counter);
+    }
+    $("#timer").html(`Timer: ${count}`);
+  }
+
+  var score = 0
+
+  function renderScore() {
+    return score;
+  }
+
+  $(function() {
+    $(".answer").click(function() {
+      if(this.innerHTML.length === 4 && count > 0) {
+        $(this).css("background", "green")
+        console.log($(this).css("background", "green"));
+        score += 2
+        $("#score").html(`Score: ${renderScore()}`)
+      } else if(count > 0 && $(this).css("background", "white")) {
+        $(this).css("background", "red")
+        score -= 4
+        $("#score").html(`Score: ${renderScore()}`)
+      }
+    })
+  })
+
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...

@@ -2,6 +2,13 @@
   background-color: blue;
 }
 
+#score {
+  border: solid black 1px;
+  border-radius: 25px;
+  background-color: #FFFFFF; /*white*/
+  text-align: center;
+}
+
 #question {
   border: solid black 1px;
   border-radius: 25px;

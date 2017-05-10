@@ -1,6 +1,6 @@
 $(document).ready(function() {
   console.log("What's up, Doc?")
-
+  })
 
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -17,14 +17,6 @@ $(document).ready(function() {
     return array;
   }
 
-  // Used like so
-  // var arr = [2, 11, 37, 42];
-  // arr = shuffle(arr);
-  // console.log(arr);
-
-  //var x
-
-//is this returning a promise or an object?
   $.ajax({
     dataType: 'json',
     method: "GET",
@@ -37,31 +29,36 @@ $(document).ready(function() {
       var rowID = 1
       var trigger = [9, 19, 29, 39, 49, 59, 69, 79, 89, 99]
 
-      console.log(data.a);
-
       shuffledArray = shuffle(arrayOfAnswers)
 
       shuffledArray.forEach(function(answerObj, i){
         // the first index
         // every tenth element, to go to the next row
-        console.log(answerObj.answer);
+
         if (i === 0) {
-          $(`#${rowID} .cell${i+1}`).html(shuffledArray[i].answer) //first answer
+          $(`#${rowID} .cell${i+1}`).text(shuffledArray[i].answer) //first answer
         } else if ( trigger.includes(i) ) { //if index ends in 9...
-          $(`#${rowID} .cell${10}`).html(shuffledArray[i].answer) //fill in 10th cell
+          $(`#${rowID} .cell${10}`).text(shuffledArray[i].answer) //fill in 10th cell
           rowID++ //and go to the next row
         } else {
-          $(`#${rowID} .cell${(i + 1) % 10}`).html(shuffledArray[i].answer) //fill in every other cell
+          $(`#${rowID} .cell${(i + 1) % 10}`).text(shuffledArray[i].answer) //fill in every other cell
         }
-      })
-    }, error: function(error) {
+
+
+        })
+        // divRows = document.getElementsByClassName('row');
+        // Array.from(divRows).forEach(function(divChild) {
+        //
+        //   Array.from(divChild.children).forEach(function(col) {
+        //
+        //     $(col).click(function(e){
+        //       console.log(this.innerText)
+        //     })
+        //
+        //   })
+        // })
+
+        }, error: function(error) {
       console.log(error)
     }
   })
-})
-
-
-
-//$("#1 .cell1").text("words on the page")
-
-//need to parse

@@ -1,16 +1,25 @@
 $("#gameButton").click(function() {
+  // empties text from cells, resets score and resets cell color to white when a new game is started
+  score = 0
+  timer = 15
+  $("#timer").html(`Timer: ${count}`)
+  Array.from($(".answer")).forEach(function(cell, i) {
+    $(cell).text("")
+    $(cell).css("background-color", "rgb(255, 255, 255)")
+    $("#score").html(`Score: ${score}`)
+  })
+
   $(function() {
 
     $(".answer").click(function() {
-      if(this.innerHTML.length === 4 && count > 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
+      if(this.innerHTML.length === 4 && count >= 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
         $(this).css("background-color", "green")
         score += 2
-        $("#score").html(`Score: ${renderScore()}`)
-      } else if(count > 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
-        debugger
+        $("#score").html(`Score: ${score}`)
+      } else if(count >= 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
         $(this).css("background", "red")
         score -= 4
-        $("#score").html(`Score: ${renderScore()}`)
+        $("#score").html(`Score: ${score}`)
       }
     })
   })

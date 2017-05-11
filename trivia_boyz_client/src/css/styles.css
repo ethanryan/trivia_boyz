@@ -4,14 +4,22 @@
 
 #score {
   border: solid black 1px;
-  border-radius: 25px;
+  border-radius: 20px;
   background-color: #FFFFFF; /*white*/
+  text-align: center;
+}
+
+
+#gameButton {
+  border: solid black 1px;
+  border-radius: 20px;
+  background-color: #FFFFFF ; /*white*/
   text-align: center;
 }
 
 #timer {
   border: solid black 1px;
-  border-radius: 25px;
+  border-radius: 20px;
   background-color: #FFFFFF; /*white*/
   text-align: center;
 }

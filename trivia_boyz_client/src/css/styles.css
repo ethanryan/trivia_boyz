@@ -34,4 +34,6 @@
   margin: 2px;
   background-color: #FFFFFF; /*white*/
   text-align: center;
+  min-height: 25px;
+  min-width: 50px;
 }

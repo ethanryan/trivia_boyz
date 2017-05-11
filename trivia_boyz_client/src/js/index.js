@@ -19,4 +19,4 @@ $("#gameButton").click(function() {
   function renderScore() {
     return score;
   }
-}
+})

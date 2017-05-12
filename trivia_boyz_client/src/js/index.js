@@ -1,6 +1,8 @@
-// $(document).ready(function() {
-//   console.log("What's up, Doc?")
-//   })
+$(document).ready(function() {
+  $("body").toasty();
+})
+
+
 var count
 var score = 0
 $("#gameButton").click(function() {
@@ -9,13 +11,15 @@ $("#gameButton").click(function() {
 
   function timer() {
     count = count-1;
+    $("#timer").html(`Timer: ${count}`)
+
 
     if (count === -1) {
-      clearInterval(counter);
+      $("#timer").html(`Timer: 0`)
+
       alert("Game Over")
-      count = 0
+      clearInterval(counter);
     }
-    $("#timer").html(`Timer: ${count}`);
   }
 
   score = 0

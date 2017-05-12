@@ -2,6 +2,7 @@ $("#gameButton").click(function() {
   // empties text from cells, resets score and resets cell color to white when a new game is started
   score = 0
   timer = 15
+  var curStreak = 0
   $("#timer").html(`Timer: ${count}`)
   Array.from($(".answer")).forEach(function(cell, i) {
     $(cell).text("")
@@ -10,15 +11,19 @@ $("#gameButton").click(function() {
   })
 
   $(function() {
-
     $(".answer").click(function() {
-      if(this.innerHTML.length === 4 && count >= 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
+      if(this.innerHTML.length === 4 && count > 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
         $(this).css("background-color", "green")
         score += 2
+        curStreak += 1
+        if (curStreak % 5 === 0) {
+          $("body").toasty('pop');
+        }
         $("#score").html(`Score: ${score}`)
-      } else if(count >= 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
+      } else if(count > 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
         $(this).css("background", "red")
         score -= 4
+        curStreak = 0
         $("#score").html(`Score: ${score}`)
       }
     })
@@ -26,6 +31,7 @@ $("#gameButton").click(function() {
 
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
+    console.log("current index:",currentIndex)
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
       // Pick a remaining element...
@@ -44,6 +50,7 @@ $("#gameButton").click(function() {
     method: "GET",
     url: "http://localhost:3000",
     success: function(data) {
+      console.log(data)
       $("#question").text(data.q.question)
       // $("#1 .cell1").html(data.a[0].answer)
 

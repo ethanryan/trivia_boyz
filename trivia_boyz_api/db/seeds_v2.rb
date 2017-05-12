@@ -8,9 +8,6 @@
 
 
 #add this: , question_ids: [1]
-questions = Question.create([
-  {question: "Click the Four-Letter Words"}
-  ])
 
 answers = Answer.create([
 

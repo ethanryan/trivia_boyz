@@ -4,8 +4,8 @@
 
 #score {
   border: solid black 1px;
-  border-radius: 20px;
-  background-color: #FFFFFF; /*white*/
+  border-radius: 25px;
+  background-color: #FFFFFF;
   text-align: center;
 }
 
@@ -24,24 +24,39 @@
   text-align: center;
 }
 
+#newGame {
+  border: solid black 1px;
+  /*border-radius: 25px;*/
+  /*background-color: #FFFFFF;*/
+  text-align: center;
+  border: none;
+  color: black;
+}
+
 #question {
   border: solid black 1px;
   border-radius: 25px;
-  background-color: #FFFFFF; /*white*/
+  background-color: #FFFFFF;
   text-align: center;
-}
-
-#firstname {
-    background-color: yellow;
 }
 
 .col.s1 {
   border: solid black 1px;
   border-radius: 5px;
   padding: 1px;
-  margin: 2px;
-  background-color: #FFFFFF; /*white*/
+  /*margin: 2px;*/
+  background-color: #FFFFFF;
   text-align: center;
   min-height: 25px;
-  min-width: 50px;
+  min-width: 60px;
 }
+/*
+
+.newGameClass {
+  border: solid green 5px;
+  border-radius: 5px;
+  padding: 1px;
+  margin: 2px;
+  background-color: #FFFFFF;
+  text-align: center;
+}*/

@@ -9,10 +9,18 @@
   text-align: center;
 }
 
+
+#gameButton {
+  border: solid black 1px;
+  border-radius: 20px;
+  background-color: #FFFFFF ; /*white*/
+  text-align: center;
+}
+
 #timer {
   border: solid black 1px;
-  border-radius: 25px;
-  background-color: #FFFFFF;
+  border-radius: 20px;
+  background-color: #FFFFFF; /*white*/
   text-align: center;
 }
 
@@ -39,6 +47,8 @@
   /*margin: 2px;*/
   background-color: #FFFFFF;
   text-align: center;
+  min-height: 25px;
+  min-width: 60px;
 }
 /*
 

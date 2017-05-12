@@ -16,9 +16,13 @@ $("#gameButton").click(function() {
         $(this).css("background-color", "green")
         score += 2
         curStreak += 1
+
         if (curStreak % 5 === 0) {
           $("body").toasty('pop');
+        } else if (curStreak >= 10 && curStreak % 3 === 0) {
+          $("body").toasty('pop');
         }
+
         $("#score").html(`Score: ${score}`)
       } else if(count > 0 && $(this).css("background-color") === "rgb(255, 255, 255)") {
         $(this).css("background", "red")

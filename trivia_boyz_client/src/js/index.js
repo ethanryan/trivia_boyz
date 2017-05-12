@@ -14,7 +14,7 @@ $("#gameButton").click(function() {
     $("#timer").html(`Timer: ${count}`)
 
 
-    if (count === -1) {
+    if (count === 0) {
       $("#timer").html(`Timer: 0`)
 
       alert("Game Over")

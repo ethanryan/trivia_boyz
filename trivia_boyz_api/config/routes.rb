@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :create, :show]
   resources :sessions
   root "game#show"
+  get "games/highscore", to: "game#highscore", as: "highscore"
+  get "games/questions", to: "game#get_questions", as: "get_questions"
 end

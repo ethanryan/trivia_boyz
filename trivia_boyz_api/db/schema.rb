@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170509161431) do
+ActiveRecord::Schema.define(version: 20170512175500) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "answer"
@@ -42,10 +42,10 @@ ActiveRecord::Schema.define(version: 20170509161431) do
   create_table "users", force: :cascade do |t|
     t.string   "username"
     t.string   "password_digest"
-    t.integer  "high_score"
+    t.integer  "high_score",      default: 0
     t.integer  "current_score"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end

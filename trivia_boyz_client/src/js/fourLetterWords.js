@@ -35,7 +35,6 @@ $("#gameButton").click(function() {
 
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-    console.log("current index:",currentIndex)
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
       // Pick a remaining element...
@@ -54,7 +53,6 @@ $("#gameButton").click(function() {
     method: "GET",
     url: "http://localhost:3000",
     success: function(data) {
-      console.log(data)
       $("#question").text(data.q.question)
       // $("#1 .cell1").html(data.a[0].answer)
 

@@ -6,25 +6,6 @@ Directions here:
 
 http://rubentd.com/toasty/
 
+then run bundle install
 
-xxx
-
-then run bundle install (????)
-
-and bundle update (???)
-
-
-x
-
-
-also run rake:db reset (????))
-
-x
-
-also within css-transition README:
-
-install css-transition:
-
-npm install css-transition
-
-then bundle install / bundle update
+also run rake:db reset

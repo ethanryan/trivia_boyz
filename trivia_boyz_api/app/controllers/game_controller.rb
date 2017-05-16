@@ -1,11 +1,14 @@
 class GameController < ApplicationController
+
   def show
     @question = Question.first
     @answers = Answer.all
     render json: { q: @question, a: @answers }
   end
+  
   def new
   end
+
   def create
     if (!User.find_by(username: game_params[:username]))
       user = User.find_or_create_by(game_params)
@@ -22,8 +25,8 @@ class GameController < ApplicationController
 
     render json: user
   end
-  def highscore()
 
+  def highscore()
     high_scores = User.order('high_score desc').limit(5)
     i = 0
     all_users_with_high_scores = high_scores.map do |user|
@@ -31,12 +34,15 @@ class GameController < ApplicationController
     end
     render json: all_users_with_high_scores
   end
+
   def get_questions
     questions = Question.pluck("question")
     render json: questions
   end
+
   private
   def game_params
     params.require(:gameInfo).permit(:username, :current_score)
   end
+
 end

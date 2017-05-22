@@ -23,4 +23,8 @@ App should then be playable at: http://localhost:8000/
 
 demo gif:
 
-<iframe src="https://giphy.com/embed/2R2NxHmHzKUrS" width="480" height="296" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/2R2NxHmHzKUrS">via GIPHY</a></p>
+https://giphy.com/gifs/2R2NxHmHzKUrS/html5
+
+on giphy:
+
+https://media.giphy.com/media/2R2NxHmHzKUrS/giphy.gif

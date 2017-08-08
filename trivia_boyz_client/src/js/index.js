@@ -3,8 +3,8 @@
 // })
 
 
-const baseUrl = 'http://localhost:3000'
-// const baseUrl = 'https://trivia-boyz-api.herokuapp.com'
+// const baseUrl = 'http://localhost:3000'
+const baseUrl = 'https://trivia-boyz-api.herokuapp.com'
 
 // const baseUrl = 'https://word-nerds-api.herokuapp.com'
 

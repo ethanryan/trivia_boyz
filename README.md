@@ -1,6 +1,14 @@
 # trivia_boyz
 Trivia Boyz is a trivia game app made with a HTML/CSS/JS frontend and a Rails API backend.
 
+Play the game here: https://trivia-boyz-client.herokuapp.com
+
+Note: Heroku apps take some time to load when visiting site for the first time.
+
+x
+
+Instructions for downloading:
+
 Note: for this app, need to install toasty.
 
 Directions here:

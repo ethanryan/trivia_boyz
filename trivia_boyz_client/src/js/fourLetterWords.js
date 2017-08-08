@@ -51,7 +51,8 @@ $("#gameButton").click(function() {
   $.ajax({
     dataType: 'json',
     method: "GET",
-    url: "http://localhost:3000",
+    url: `${baseUrl}`,
+    // url: "http://localhost:3000",
     success: function(data) {
       $("#question").text(data.q.question)
       // $("#1 .cell1").html(data.a[0].answer)

@@ -5,7 +5,7 @@
 
 // const baseUrl = 'http://localhost:3000'
 // const baseUrl = 'https://word-nerds-api.herokuapp.com'
-const baseUrl = 'https://trivia-boyz.herokuapp.com'
+const baseUrl = 'https://trivia-boyz-api.herokuapp.com'
 // const baseUrl = 'https://trivia_boyz_api_production.herokuapp.com'
 
 $(document).ready(function() {

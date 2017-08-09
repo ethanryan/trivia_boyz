@@ -29,6 +29,8 @@ cd into trivia_boyz_client and run server with python -m SimpleHTTPServer
 
 App should then be playable at: http://localhost:8000/
 
+![trivia boyz demo](https://giphy.com/gifs/IdWOFvy8Q1yWQ/fullscreen)
+
 demo gif:
 
 https://giphy.com/gifs/2R2NxHmHzKUrS/html5

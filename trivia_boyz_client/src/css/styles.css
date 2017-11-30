@@ -9,6 +9,11 @@
   text-align: center;
 }
 
+.highScores {
+  color: white;
+  font-size: 40px;
+}
+
 
 #gameButton {
   border: solid black 1px;

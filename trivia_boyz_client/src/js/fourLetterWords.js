@@ -70,7 +70,7 @@ $("#gameButton").click(function() {
       var firstFortyAnswers = shuffledAnswers.splice(0, 40)
       var firstFortyIndices = randomIndices.splice(0, 40)
 
-      console.log(shuffledAnswers.length)
+      console.log('shuffledAnswers.length: ', shuffledAnswers.length)
 
 
       firstFortyAnswers.forEach(function(answerObj, i){

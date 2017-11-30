@@ -5,7 +5,7 @@ class GameController < ApplicationController
     @answers = Answer.all
     render json: { q: @question, a: @answers }
   end
-  
+
   def new
   end
 
@@ -26,11 +26,12 @@ class GameController < ApplicationController
     render json: user
   end
 
-  def highscore()
+  def index
     high_scores = User.order('high_score desc').limit(5)
     i = 0
     all_users_with_high_scores = high_scores.map do |user|
-      "#{i = i + 1}. #{user.username}: #{user.high_score}"
+      i += 1
+      "#{i}. #{user.username}: #{user.high_score}"
     end
     render json: all_users_with_high_scores
   end
